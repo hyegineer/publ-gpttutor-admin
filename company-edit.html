@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1400">
+    <title>GPT Tutor admin</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/vendor/fullpage.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/lodash.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header-wrap">
+        <header class="header">
+          <div class="inner">
+            <h1 class="logo">
+              <a href="index.html" class="logo-link">
+                <img src="assets/images/logo-color.png" alt="" class="logo-color">
+              </a>
+            </h1>
+            <div class="nav-wrap">
+              <ul class="nav-list-grp">
+                <li class="nav-list ">
+                  <a href="company-main.html" class="nav-link">
+                    <span>회사소개</span>
+                  </a>
+                  <div class="sub-nav-list-wrap">
+                    <ul class="sub-nav-list-grp">
+                      <li class="sub-nav-list">
+                        <a href="company-main.html">회사소개</a>
+                      </li>
+                      <li class="sub-nav-list">
+                        <a href="company-edit.html">회사소개 편집</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-list ">
+                  <a href="board-setting.html" class="nav-link">
+                    <span>고객센터</span>
+                  </a>
+                  <div class="sub-nav-list-wrap">
+                    <ul class="sub-nav-list-grp">
+                      <li class="sub-nav-list">
+                        <a href="board-setting.html">게시판 관리</a>
+                      </li>
+                      <li class="sub-nav-list">
+                        <a href="board-create.html">게시글 작성</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-list ">
+                  <a href="invitation-code.html" class="nav-link">
+                    <span>초대장 코드</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="second-category-edit.html" class="nav-link">
+                    <span>2차 카테고리명 편집</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="member-info.html" class="nav-link">
+                    <span>회원정보 및 조회</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="free-period-setting.html" class="nav-link">
+                    <span>무료 재 다운로드 기간</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="member-token-count-setting.html" class="nav-link">
+                    <span>회원 월 토큰횟수 설정</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="final-content-enroll-1.html" class="nav-link">
+                    <span>최종 컨텐츠 등록</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page-wrapper">
+        <div class="page-container">
+          <div class="page board-create-page">
+            <h3 class="page-ttl">회사소개 편집</h3>
+            <div class="page-contt">
+              <div class="box">
+                <div class="form-item-grp">
+                  <div class="form-item-row">
+                    <label class="label">제목</label>
+                    <input type="text" class="inp" value="회사소개 제목입니다.">
+                  </div>
+                  <div class="form-item-row">
+                    <label class="label">본문</label>
+                    <textarea class="inp">GPT 튜터는 선생님의 힘이 되는 &#10;똑똑한 서비스로 태블릿 및 노트북/컴퓨터 PC에서 사용가능합니다.&#10;&#10;선생님의 수업은 더 알차게, 수업준비는 더 편해지도록 돕는&#10;든든한 스마트 에듀테크 서비스입니다. :)</textarea>
+                  </div>
+                  <div class="form-item-row form-item-file-row">
+                    <label class="label">이미지 첨부</label>
+                    <div class="inp-wrap">
+                      <input id="file-1" type="file" accept="image/gif, image/jpeg, image/png" class="none">
+                      <div class="file-btn-txt-wrap">
+                        <label for="file-1" class="btn theme-bd-btn">
+                          <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                          <span class="txt">첨부하기</span>
+                        </label>
+
+                        <!-- 이미 등록된 이미지 있으면 여기에 파일명이 있어야함 -->
+                        <span id="file-name" class="file-txt">company-intro-picture.png</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" onclick="openModal('modal-1');" class="submit-btn theme-solid-btn">
+                  편집 완료
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal-1" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+        <div class="custom-modal system-modal">
+          <div class="smodal-contt-container">
+            <h3 class="smodal-ttl">회사소개 편집</h3>
+            <div class="smodal-contt">
+              <p class="smodal-desc">
+                회사소개를 편집하시겠습니까?
+              </p>
+            </div>
+          </div>
+          <div class="smodal-btn-wrap">
+            <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+            <button type="button" class="btn confirm-btn" onclick="alert('편집하였습니다.');location.href='company-main.html';">편집하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      $("#file-1").on("change", function() {
+        // 파일 선택시 파일명
+        var fileName = $("#file-1").val().split('/').pop().split('\\').pop();
+        $("#file-name").text(fileName);
+      })
+    </script>
+  </body>
+</html>

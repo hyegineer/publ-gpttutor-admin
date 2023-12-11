@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1400">
+    <title>GPT Tutor admin</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/vendor/fullpage.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/lodash.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header-wrap">
+        <header class="header">
+          <div class="inner">
+            <h1 class="logo">
+              <a href="index.html" class="logo-link">
+                <img src="assets/images/logo-color.png" alt="" class="logo-color">
+              </a>
+            </h1>
+            <div class="nav-wrap">
+              <ul class="nav-list-grp">
+                <li class="nav-list ">
+                  <a href="company-main.html" class="nav-link">
+                    <span>회사소개</span>
+                  </a>
+                  <div class="sub-nav-list-wrap">
+                    <ul class="sub-nav-list-grp">
+                      <li class="sub-nav-list">
+                        <a href="company-main.html">회사소개</a>
+                      </li>
+                      <li class="sub-nav-list">
+                        <a href="company-edit.html">회사소개 편집</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-list active">
+                  <a href="board-setting.html" class="nav-link">
+                    <span>고객센터</span>
+                  </a>
+                  <div class="sub-nav-list-wrap">
+                    <ul class="sub-nav-list-grp">
+                      <li class="sub-nav-list">
+                        <a href="board-setting.html">게시판 관리</a>
+                      </li>
+                      <li class="sub-nav-list">
+                        <a href="board-create.html">게시글 작성</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-list ">
+                  <a href="invitation-code.html" class="nav-link">
+                    <span>초대장 코드</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="second-category-edit.html" class="nav-link">
+                    <span>2차 카테고리명 편집</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="member-info.html" class="nav-link">
+                    <span>회원정보 및 조회</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="free-period-setting.html" class="nav-link">
+                    <span>무료 재 다운로드 기간</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="member-token-count-setting.html" class="nav-link">
+                    <span>회원 월 토큰횟수 설정</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="final-content-enroll-1.html" class="nav-link">
+                    <span>최종 컨텐츠 등록</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page-wrapper">
+        <div class="page-container">
+          <div class="page board-setting-page">
+            <div class="page-ttl-wrap">
+              <h3 class="page-ttl">게시판 관리</h3>
+              <div class="page-desc-btn-wrap">
+                <span class="txt">게시판 글을 작성하고 싶으세요?</span>
+                <button type="button" onclick="location.href='board-create.html';" class="theme-bd-btn">+ 게시판 작성하기</button>
+              </div>
+            </div>
+            <div class="page-contt">
+              <div class="box">
+
+                <!-- 게시판 글 -->
+                <div class="board-list-container">
+
+                  <!-- 게시판 리스트 -->
+                  <div class="board-list">
+                    <div class="board-ttl-wrap">
+                      <div>
+                        <span class="num">NO 2.</span>
+                        <span class="ttl">두번째 게시글 제목입니다.</span>
+                      </div>
+                      <div class="mg-left">
+                        <button type="button" onclick="location.href='board-edit.html';" class="btn theme-solid-btn">
+                          <i class="fa fa-pencil-square-o"></i>
+                          <span class="txt">수정하기</span>
+                        </button>
+                        <button type="button" onclick="openModal('modal-1');" class="btn red-bd-btn">
+                          <i class="fa fa-trash-o"></i>
+                          <span class="txt">삭제하기</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="board-content">
+                      <p class="txt">
+                        개인정보처리방침 변경을 안내드립니다. <br><br>
+                        안녕하세요, 매쓰플랫입니다. <br>
+                        매쓰플랫을 이용하시는 선생님의 개인정보처리방침이 2023년 08월 31일로 개정됨을 안내드리오니, 이용에 참고하여 주시기 바랍니다. 감사합니다. <br><br>
+                        1. 주요 변경 내용
+                        <br>
+                        매쓰플랫에 새롭게 교재 제작 주문 서비스가 추가됩니다. <br>
+                        해당 서비스를 이용하시는 선생님에 한하여 개인정보가 활용됩니다. <br>
+                        *원활한 교재 제작 및 배송을 위해서만 활용됩니다.
+                      </p>
+                      <img src="assets/images/img-sample01.png" alt="">
+                    </div>
+                  </div>
+
+                  <!-- END 게시판 리스트 -->
+
+                  <!-- 게시판 리스트 -->
+                  <div class="board-list">
+                    <div class="board-ttl-wrap">
+                      <div>
+                        <span class="num">NO 1.</span>
+                        <span class="ttl">첫번째 게시글 제목입니다.</span>
+                      </div>
+                      <div class="mg-left">
+                        <button type="button" onclick="location.href='board-edit.html';" class="btn theme-solid-btn">
+                          <i class="fa fa-pencil-square-o"></i>
+                          <span class="txt">수정하기</span>
+                        </button>
+                        <button type="button" onclick="openModal('modal-1');" class="btn red-bd-btn">
+                          <i class="fa fa-trash-o"></i>
+                          <span class="txt">삭제하기</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="board-content">
+                      <p class="txt">
+                        첫번째 게시글입니다. <br>
+                        글을 적으면 이렇게 본문이 보입니다. <br>
+                        이미지를 올리면 아래처럼 보입니다.
+                      </p>
+                      <img src="assets/images/img-sample02.png" alt="">
+                    </div>
+                  </div>
+
+                  <!-- END 게시판 리스트 -->
+                </div>
+
+                <!-- END 게시판 글 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal-1" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+        <div class="custom-modal system-modal">
+          <div class="smodal-contt-container">
+            <h3 class="smodal-ttl">게시글을 삭제하시겠습니까?</h3>
+            <div class="smodal-contt">
+              <p class="smodal-desc">
+                게시글을 삭제하시면, 복구하실 수 없습니다.
+              </p>
+            </div>
+          </div>
+          <div class="smodal-btn-wrap">
+            <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+            <button type="button" class="btn confirm-btn" onclick="alert('삭제하였습니다.');allCloseModal();">삭제하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>

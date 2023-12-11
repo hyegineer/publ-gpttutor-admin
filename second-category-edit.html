@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1400">
+    <title>GPT Tutor admin</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/vendor/fullpage.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/lodash.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header-wrap">
+        <header class="header">
+          <div class="inner">
+            <h1 class="logo">
+              <a href="index.html" class="logo-link">
+                <img src="assets/images/logo-color.png" alt="" class="logo-color">
+              </a>
+            </h1>
+            <div class="nav-wrap">
+              <ul class="nav-list-grp">
+                <li class="nav-list ">
+                  <a href="company-main.html" class="nav-link">
+                    <span>회사소개</span>
+                  </a>
+                  <div class="sub-nav-list-wrap">
+                    <ul class="sub-nav-list-grp">
+                      <li class="sub-nav-list">
+                        <a href="company-main.html">회사소개</a>
+                      </li>
+                      <li class="sub-nav-list">
+                        <a href="company-edit.html">회사소개 편집</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-list ">
+                  <a href="board-setting.html" class="nav-link">
+                    <span>고객센터</span>
+                  </a>
+                  <div class="sub-nav-list-wrap">
+                    <ul class="sub-nav-list-grp">
+                      <li class="sub-nav-list">
+                        <a href="board-setting.html">게시판 관리</a>
+                      </li>
+                      <li class="sub-nav-list">
+                        <a href="board-create.html">게시글 작성</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-list ">
+                  <a href="invitation-code.html" class="nav-link">
+                    <span>초대장 코드</span>
+                  </a>
+                </li>
+                <li class="nav-list active">
+                  <a href="second-category-edit.html" class="nav-link">
+                    <span>2차 카테고리명 편집</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="member-info.html" class="nav-link">
+                    <span>회원정보 및 조회</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="free-period-setting.html" class="nav-link">
+                    <span>무료 재 다운로드 기간</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="member-token-count-setting.html" class="nav-link">
+                    <span>회원 월 토큰횟수 설정</span>
+                  </a>
+                </li>
+                <li class="nav-list ">
+                  <a href="final-content-enroll-1.html" class="nav-link">
+                    <span>최종 컨텐츠 등록</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page-wrapper">
+        <div class="page-container">
+          <div class="page second-category-edit-page">
+            <h3 class="page-ttl">2차 카테고리명 편집</h3>
+            <div class="page-contt">
+              <div class="box">
+
+                <!-- 탭 -->
+                <div class="tabs">
+                  <button type="button" class="tab active" data-tab-content="tab01-content">사이드메뉴 1</button>
+                  <button type="button" class="tab" data-tab-content="tab02-content">사이드메뉴 2</button>
+                </div>
+
+                <!-- END 탭 -->
+
+                <!-- 탭 컨텐츠 컨테이너 -->
+                <div class="tab-content-container">
+
+                  <!-- 사이드메뉴 1 컨텐츠 -->
+                  <div id="tab01-content" class="tab-content active">
+
+                    <!-- 사이드 메뉴 1 탭 -->
+                    <div class="side-tabs">
+                      <button type="button" class="side-tab active" data-sidetab-content="sidetab01-01-content">
+                        <span class="icon">
+                    <img src="assets/images/icon/icon-menu01-color.svg" alt="" class="icon-off">
+                    <img src="assets/images/icon/icon-menu01-white.svg" alt="" class="icon-on">
+                  </span>
+                        <span>교과서</span>
+                      </button>
+                      <button type="button" class="side-tab" data-sidetab-content="sidetab01-02-content">
+                        <span class="icon">
+                    <img src="assets/images/icon/icon-menu02-color.svg" alt="" class="icon-off">
+                    <img src="assets/images/icon/icon-menu02-white.svg" alt="" class="icon-on">
+                  </span>
+                        <span>모의고사</span>
+                      </button>
+                      <button type="button" class="side-tab" data-sidetab-content="sidetab01-03-content">
+                        <span class="icon">
+                    <img src="assets/images/icon/icon-menu03-color.svg" alt="" class="icon-off">
+                    <img src="assets/images/icon/icon-menu03-white.svg" alt="" class="icon-on">
+                  </span>
+                        <span>EBS</span>
+                      </button>
+                    </div>
+
+                    <!-- END 사이드 메뉴 1 탭 -->
+
+                    <!-- 사이드 메뉴 1 탭 컨텐츠 컨테이너 -->
+                    <div class="side-tab-content-container">
+
+                      <!-- 사이드메뉴 1 - 교과서 -->
+                      <div id="sidetab01-01-content" class="side-tab-content active">
+                        <div class="second-cats-container">
+                          <div class="form-item-grp">
+                            <div class="form-item-row">
+                              <label class="label">1번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요." value="영어">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">2번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요." value="영어 1">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">3번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">4번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">5번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">6번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                          </div>
+                          <button type="button" class="btn common-submit-btn theme-solid-btn">
+                            완료
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 사이드메뉴 1 - 교과서 -->
+
+                      <!-- 사이드메뉴 1 - 모의고사 -->
+                      <div id="sidetab01-02-content" class="side-tab-content">
+                        <div class="second-cats-container">
+                          <div class="form-item-grp">
+                            <div class="form-item-row">
+                              <label class="label">1번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요." value="독해와 작문">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">2번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">3번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">4번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">5번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">6번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                          </div>
+                          <button type="button" class="btn common-submit-btn theme-solid-btn">
+                            완료
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 사이드메뉴 1 - 모의고사 -->
+
+                      <!-- 사이드메뉴 1 - EBS -->
+                      <div id="sidetab01-03-content" class="side-tab-content">
+                        <div class="second-cats-container">
+                          <div class="form-item-grp">
+                            <div class="form-item-row">
+                              <label class="label">1번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요." value="영어 1">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">2번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">3번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">4번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">5번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">6번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                          </div>
+                          <button type="button" class="btn common-submit-btn theme-solid-btn">
+                            완료
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 사이드메뉴 1 - EBS -->
+                    </div>
+
+                    <!-- END 사이드 메뉴 1 탭 컨텐츠 컨테이너 -->
+                  </div>
+
+                  <!-- END 사이드메뉴 1 컨텐츠 -->
+
+                  <!-- 사이드메뉴 2 컨텐츠 -->
+                  <div id="tab02-content" class="tab-content">
+
+                    <!-- 사이드 메뉴 2 탭 -->
+                    <div class="side-tabs">
+                      <button type="button" class="side-tab active" data-sidetab-content="sidetab02-01-content">
+                        <span class="icon">
+                    <img src="assets/images/icon/icon-menu01-color.svg" alt="" class="icon-off">
+                    <img src="assets/images/icon/icon-menu01-white.svg" alt="" class="icon-on">
+                  </span>
+                        <span>교과서</span>
+                      </button>
+                      <button type="button" class="side-tab" data-sidetab-content="sidetab02-02-content">
+                        <span class="icon">
+                    <img src="assets/images/icon/icon-menu02-color.svg" alt="" class="icon-off">
+                    <img src="assets/images/icon/icon-menu02-white.svg" alt="" class="icon-on">
+                  </span>
+                        <span>모의고사</span>
+                      </button>
+                      <button type="button" class="side-tab" data-sidetab-content="sidetab02-03-content">
+                        <span class="icon">
+                    <img src="assets/images/icon/icon-menu03-color.svg" alt="" class="icon-off">
+                    <img src="assets/images/icon/icon-menu03-white.svg" alt="" class="icon-on">
+                  </span>
+                        <span>EBS</span>
+                      </button>
+                    </div>
+
+                    <!-- END 사이드 메뉴 2 탭 -->
+
+                    <!-- 사이드 메뉴 2 탭 컨텐츠 컨테이너 -->
+                    <div class="side-tab-content-container">
+
+                      <!-- 사이드메뉴 1 - 교과서 -->
+                      <div id="sidetab02-01-content" class="side-tab-content active">
+                        <div class="second-cats-container">
+                          <div class="form-item-grp">
+                            <div class="form-item-row">
+                              <label class="label">1번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요." value="변형문제 영어">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">2번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요." value="변형문제 영어 1">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">3번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">4번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">5번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">6번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                          </div>
+                          <button type="button" class="btn common-submit-btn theme-solid-btn">
+                            완료
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 사이드메뉴 1 - 교과서 -->
+
+                      <!-- 사이드메뉴 1 - 모의고사 -->
+                      <div id="sidetab02-02-content" class="side-tab-content">
+                        <div class="second-cats-container">
+                          <div class="form-item-grp">
+                            <div class="form-item-row">
+                              <label class="label">1번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요." value="변형문제 독해와 작문">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">2번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">3번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">4번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">5번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">6번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                          </div>
+                          <button type="button" class="btn common-submit-btn theme-solid-btn">
+                            완료
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 사이드메뉴 1 - 모의고사 -->
+
+                      <!-- 사이드메뉴 1 - EBS -->
+                      <div id="sidetab02-03-content" class="side-tab-content">
+                        <div class="second-cats-container">
+                          <div class="form-item-grp">
+                            <div class="form-item-row">
+                              <label class="label">1번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요." value="변형문제 영어 1">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">2번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">3번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">4번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">5번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                            <div class="form-item-row">
+                              <label class="label">6번 메뉴명칭</label>
+                              <input type="text" class="inp" placeholder="텍스트를 입력해주세요.">
+                            </div>
+                          </div>
+                          <button type="button" class="btn common-submit-btn theme-solid-btn">
+                            완료
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 사이드메뉴 1 - EBS -->
+                    </div>
+
+                    <!-- END 사이드 메뉴 2 탭 컨텐츠 컨테이너 -->
+                  </div>
+
+                  <!-- END 사이드메뉴 2 컨텐츠 -->
+                </div>
+
+                <!-- END 탭 컨텐츠 컨테이너 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      $('[data-tab-content]').on('click', function(e) {
+        var content = $(e.currentTarget).attr('data-tab-content');
+        $('[data-tab-content]').removeClass('active');
+        $(e.currentTarget).addClass('active');
+        $('.tab-content').removeClass('active');
+        $(`#${content}`).addClass('active');
+        $('html').scrollTop(0);
+      })
+      $('[data-sidetab-content]').on('click', function(e) {
+        var content = $(e.currentTarget).attr('data-sidetab-content');
+        var parentId = $(e.currentTarget).parents('.tab-content').attr('id');
+        $(`#${parentId} [data-sidetab-content]`).removeClass('active');
+        $(e.currentTarget).addClass('active');
+        $(`#${parentId} .side-tab-content`).removeClass('active');
+        $(`#${content}`).addClass('active');
+        $('html').scrollTop(0);
+      })
+    </script>
+  </body>
+</html>
